@@ -1,0 +1,508 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway';
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    /* background: rgba(181, 204, 191, 0.288); */
+    /* background: white; */
+    background-image: url(../img/modal.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#welcomeBar {
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    width: 80vw;
+    z-index: 4;
+    background: white;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 0px 0px 15px  rgb(148, 175, 160);
+    color: rgb(148, 175, 160);
+}
+
+#forms {
+    position: absolute;
+    top: 32px;
+    z-index: 3;
+    padding: 10px 25px;
+    right: 7vw;
+    display: flex;
+    width: 35vw;
+    justify-content: space-between;
+    box-shadow: 0px 0px 15px  rgb(148, 175, 160);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+p, h1, h2, h3 {
+    color: rgb(148, 175, 160);
+}
+
+#productContainer{
+    width: 80vw;
+    height: 100%;
+    overflow: hidden;
+    /* background: rgba(181, 204, 191, 0.288); */
+    padding-top: 70px;
+}
+
+#filtered {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2vw;
+    grid-row-gap: 3vw;
+    padding: 3vw;
+    justify-items: center;
+}
+
+#cartWrapper, #profileWrapper, #modalWrapper {
+    width: 80vw;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    padding: 50px 0;
+    /* background: rgba(181, 204, 191, 0.288); */
+    align-items: center;
+}
+
+.product {
+    width: 21vw;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px  rgb(148, 175, 160);
+    border-radius: 10px;
+}
+
+.product:hover {
+    opacity: 0.8;
+}
+
+.productImg {
+    width: 21vw;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.cartImg {
+    width: 50px;
+    height: auto;
+    border-radius: 100px;
+}
+
+.product > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw;
+}
+
+#modalWrapper {
+    display: none;
+    /* background-image: url(../img/modal.jpg);
+    background-size: cover;
+    background-position: center; */
+}
+
+#modalContent {
+    padding-top: 70px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    width: 70vw;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 4vw;
+    position: relative;
+    box-shadow: 0px 0px 15px  rgb(148, 175, 160);
+    grid-column-gap: 5vw;
+}
+
+#modalWrapper > div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /* padding-top: 60px; */
+    height: 100%;
+}
+
+.modalImg {
+    width: 25vw;
+    height: auto;
+    margin-bottom: 10px;
+    /* padding-right: 4vw; */
+    border-radius: 10px;
+}
+
+#closeProduct {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.grid-2-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    width: 65vw;
+    height: 55vh;
+    box-shadow: 0px 0px 15px  rgb(148, 175, 160);
+}
+.grid-2-columns > div:first-of-type {
+    border-right: 4px dotted  rgb(148, 175, 160);
+    padding: 0 5.5vw; 
+}
+
+.grid-2-columns input {
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
+    width: 15vw;
+    margin-bottom: 7px;
+    box-shadow: 0px 0px 15px  rgba(148, 175, 160, 0.616);
+}
+
+table {
+    text-align: center;
+    width: 60vw;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px  rgb(148, 175, 160);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table tr:last-child {
+    font-weight: 700;
+}
+
+th {
+    /* border-bottom: 3px dotted white; */
+    padding: 15px;
+    color: rgb(148, 175, 160);
+}
+
+td {
+    border-top: 3px dotted  rgb(148, 175, 160);
+    padding: 15px;
+    color: rgb(148, 175, 160);
+}
+
+#placeOrderButton {
+    height: 60px;
+    width: 150px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+button {
+    background:rgb(130, 167, 146);
+    color: white;
+    padding: 7px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+}
+
+input, select {
+    background: white;
+    color: rgb(130, 167, 146);
+    padding: 7px;
+    cursor: pointer;
+    border: 1px solid rgb(130, 167, 146);
+    border-radius: 50px;
+    /* box-shadow: 0px 0px 15px  rgba(148, 175, 160, 0.616); */
+}
+
+#filterByCategory input {
+    background:rgb(130, 167, 146);
+    color: white;
+    padding: 7px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+    #welcomeBar {
+        display: none;
+    }
+    #forms {
+        position: fixed;
+        top: 100px;
+        z-index: 0;
+        right: 0;
+        padding: 10px;
+        display: flex;
+        background:white;
+        width:50vw;
+        justify-content: space-around;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    #productContainer{
+        width: 100vw;
+        height: 100%;
+        overflow: hidden;
+        /* background: rgba(181, 204, 191, 0.288); */
+        padding-top: 70px;
+    }
+    
+    #filtered {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2vw;
+        grid-row-gap: 3.5vw;
+        padding: 3vw;
+        justify-items: center;
+    }
+    
+    #cartWrapper, #profileWrapper, #modalWrapper {
+        width: 100vw;
+        height: 100%;
+        display: grid;
+        justify-items: center;
+        padding: 70px 0;
+        /* background: rgba(181, 204, 191, 0.288); */
+        align-items: center;
+    }
+    #profileWrapper {
+        padding: 120px 0;
+    }
+    #modalWrapper {
+        display: none;
+    }
+    #modalContent {
+        padding-top: 50px;
+        width: 75vw;
+        padding: 5vw;
+        position: relative;
+    }
+    .modalImg {
+        width: 40vw;
+    }
+    .product {
+        width: 28vw;
+    }
+    .productImg {
+        width: 28vw;
+        height: auto;
+    }
+    p {
+        font-size: 0.8em;
+    }
+    .grid-2-columns {
+        width: 83vw;
+        padding: 30px;
+        height: 100%;
+        align-items: flex-start;
+    }
+    .grid-2-columns input {
+        border: none;
+        border-radius: 50px;
+        padding: 6px;
+        width: 27vw;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    table {
+        text-align: center;
+        width: 80vw;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        padding: 0px;
+        margin: 20px 0;
+    }
+    
+    th {
+        /* border-bottom: 3px dotted white; */
+        /* padding: 10px; */
+    }
+    /* th:first-of-type {
+        display: none;
+    }
+    td:first-of-type {
+        display: none;
+    } */
+    td {
+        border-top: 3px dotted rgb(148, 175, 160);
+        /* padding: 10px; */
+    }
+    #placeOrderButton {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 800px) {
+    #modalWrapper > div {
+        padding-top: 40px;
+    }
+    #modalContent {
+        grid-template-columns: 1fr;
+        padding-top: 50px;
+        width: 75vw;
+        padding: 7.5vw;
+        position: relative;
+    }
+    .modalImg {
+        width: 60vw;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    #welcomeBar {
+        display: none;
+    }
+    #forms {
+        position: fixed;
+        top: 70px;
+        z-index: 0;
+        right: 0;
+        padding: 10px;
+        display: flex;
+        background:white;
+        width:100vw;
+        justify-content: space-around;
+    }
+    #productContainer{
+        width: 100vw;
+        height: 100%;
+        overflow: hidden;
+        /* background: rgba(181, 204, 191, 0.288); */
+        padding-top: 65px;
+    }
+    
+    #filtered {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2vw;
+        grid-row-gap: 5vw;
+        padding: 3vw;
+        justify-items: center;
+    }
+    
+    #cartWrapper, #profileWrapper, #modalWrapper {
+        width: 100vw;
+        height: 100%;
+        display: grid;
+        justify-items: center;
+        padding: 40px 0;
+        /* background: rgba(181, 204, 191, 0.288); */
+        align-items: center;
+    }
+    #modalWrapper {
+        display: none;
+    }
+    #modalWrapper > div {
+        display: grid;
+        justify-items: center;
+        padding-top: 35px;
+    }
+    #modalContent {
+        padding-top: 50px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        width: 85vw;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        padding: 30px;
+        position: relative;
+    }
+    #modalContent img {
+        width: 65vw;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+    #closeProduct {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .product {
+        width: 40vw;
+    }
+    .product > div {
+        font-size: 0.9em;
+        padding: 1.2vw;
+    }
+    .productImg {
+        width: 40vw;
+        height: auto;
+    }
+    p {
+        font-size: 0.8em;
+    }
+    .grid-2-columns {
+        grid-template-columns: 1fr;
+        width: 80vw;
+        grid-row-gap: 20px;
+        padding: 30px;
+        height: 100%;
+    }
+    .grid-2-columns > div:first-of-type {
+        border-bottom: 4px dotted rgb(148, 175, 160);
+        padding-right: 0;
+        border-right: none;
+    }
+    
+    .grid-2-columns input {
+        border: none;
+        border-radius: 50px;
+        padding: 6px;
+        width: 200px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    table {
+        text-align: center;
+        width: 90vw;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        padding: 0px;
+        margin: 20px 0;
+    }
+    
+    th {
+        /* border-bottom: 3px dotted white; */
+        padding: 10px;
+    }
+    th:first-of-type {
+        display: none;
+    }
+    td:first-of-type {
+        display: none;
+    }
+    td {
+        border-top: 3px dotted rgb(148, 175, 160);
+        padding: 10px;
+    }
+    #placeOrderButton {
+        margin-top: 20px;
+    }
+}

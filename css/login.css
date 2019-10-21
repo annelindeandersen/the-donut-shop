@@ -1,0 +1,80 @@
+#logo_frontpage{
+    background-image: url('../img/logo.png');
+    background-size: cover;
+    width: 200px;
+    height:200px;
+    margin-top: 50px;
+    z-index: 5;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.layer {
+    background-color: rgba(255, 255, 255, 0.712);
+    position: absolute;
+    width: 100vw;
+    height: 125.4%;
+}
+
+#wrapper {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-image: url(../img/background1.jpg);
+    background-position: top center;
+    background-size: cover;
+    height: 100%;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway';
+}
+#signup {
+    display: grid;
+}
+#login {
+    display: grid;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+p {
+    color: white;
+    font-size: 0.7em;
+    text-align: center;
+    cursor: pointer;
+}
+
+input, button {
+    padding: 7px;
+    border-radius: 50px;
+    border: none;
+    margin-top: 10px;
+    width: 200px;
+}
+
+button {
+    background:rgb(130, 167, 146);
+    color: white;
+    width: 214px;
+    cursor: pointer;
+}
+
+form {
+    margin-top: 30px;
+    background: rgb(181, 204, 191);
+    padding: 40px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(82, 82, 82, 0.623);
+    z-index: 5;
+}
